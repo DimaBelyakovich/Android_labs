@@ -14,10 +14,10 @@ class SecondActivity : AppCompatActivity() {
 
         val numberMassage = intent.getStringExtra(EXTRA_NUMBER)
         val textView = findViewById<TextView>(R.id.textView2).apply {
-            text = "= $numberMassage"
+            text = numberMassage
         }
 
-        val editText = findViewById<EditText>(R.id.editTextNumberDecimal2)
+        val editText = findViewById<EditText>(R.id.editTextNumber2)
 
         var score = numberMassage.toInt()
 

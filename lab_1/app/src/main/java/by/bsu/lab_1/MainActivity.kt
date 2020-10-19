@@ -20,11 +20,11 @@ class MainActivity : AppCompatActivity() {
             if(receivedMassage == null){
                 receivedMassage = "0"
             }
-            text = " = $receivedMassage"
+            text = receivedMassage
         }
         var score = receivedMassage.toInt()
 
-        val editTextNumberView = findViewById<EditText>(R.id.editTextNumberDecimal)
+        val editTextNumberView = findViewById<EditText>(R.id.editTextNumber)
 
         val buttonOK = findViewById<Button>(R.id.button_ok)
         buttonOK.setOnClickListener {
