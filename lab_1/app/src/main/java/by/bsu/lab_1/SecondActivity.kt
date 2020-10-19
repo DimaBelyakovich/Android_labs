@@ -24,11 +24,15 @@ class SecondActivity : AppCompatActivity() {
         val button = findViewById<Button>(R.id.button)
         button.setOnClickListener{
             val massage = editText.text.toString()
-            score += massage.toInt()
-            val intent = Intent(this, MainActivity::class.java).apply {
-                putExtra(EXTRA_NUMBER, score.toString())
+            if (massage == ""){
+                return@setOnClickListener
+            }else {
+                score += massage.toInt()
+                val intent = Intent(this, MainActivity::class.java).apply {
+                    putExtra(EXTRA_NUMBER, score.toString())
+                }
+                startActivity(intent)
             }
-            startActivity(intent)
         }
     }
 

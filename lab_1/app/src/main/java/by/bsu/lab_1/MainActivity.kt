@@ -30,11 +30,15 @@ class MainActivity : AppCompatActivity() {
         buttonOK.setOnClickListener {
             val massageNumber = editTextNumberView.text.toString()
 
-            score += massageNumber.toInt()
-            val intent = Intent(this, SecondActivity::class.java).apply {
-                putExtra(EXTRA_NUMBER, score.toString())
+            if(massageNumber == ""){
+                return@setOnClickListener
+            }else {
+                score += massageNumber.toInt()
+                val intent = Intent(this, SecondActivity::class.java).apply {
+                    putExtra(EXTRA_NUMBER, score.toString())
+                }
+                startActivity(intent)
             }
-            startActivity(intent)
         }
     }
 }
