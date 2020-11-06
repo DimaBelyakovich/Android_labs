@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">lab_2</string>
+    <string name="button_ok">Ok</string>
+    <string name="empty_string">Number doesnt entered</string>
+    <string name="input_hint">Enter the number</string>
+    <string name="activity_name_main">MainActivity</string>
+    <string name="activity_name_second">SecondActivity</string>
+</resources>

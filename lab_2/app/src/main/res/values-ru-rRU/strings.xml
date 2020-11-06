@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Лаб_2</string>
+    <string name="button_ok">Ок</string>
+    <string name="empty_string">Число не введено</string>
+    <string name="input_hint">Введите число</string>
+    <string name="activity_name_main">Главная активити</string>
+    <string name="activity_name_second">Вторая активити</string>
+</resources>
