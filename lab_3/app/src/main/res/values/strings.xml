@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">lab_3</string>
+    <string name="five_sec">Get date and time every 5 seconds</string>
+    <string name="ten_sec">Get date and time every 10 seconds</string>
+    <string name="start_text">In the menu you can run toasts that appear every 5 seconds</string>
+    <string name="toasts_in_progress">Now toasts appear every 5 seconds</string>
+</resources>
