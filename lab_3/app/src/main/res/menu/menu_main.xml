@@ -3,12 +3,17 @@
 
     <item
         android:id="@+id/five_seconds"
-        android:title="@string/five_sec"
+        android:title="@string/five_sec_menu"
         />
 
     <item
         android:id="@+id/ten_seconds"
-        android:title="@string/ten_sec"
+        android:title="@string/ten_sec_menu"
+        />
+
+    <item
+        android:id="@+id/stop_toast"
+        android:title="@string/stop_toasts"
         />
 
 </menu>

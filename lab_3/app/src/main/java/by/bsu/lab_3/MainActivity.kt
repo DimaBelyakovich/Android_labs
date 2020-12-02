@@ -21,6 +21,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val textView = findViewById<TextView>(R.id.massage)
+        textView.text = getString(R.string.start_massage)
+
         val intent = Intent(this, ToastService::class.java)
         bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE)
     }
@@ -32,20 +35,31 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        //val intent = Intent(this, ToastService::class.java)
         val textView = findViewById<TextView>(R.id.massage)
         return when (item.itemId) {
             R.id.five_seconds -> {
-                textView.text = getString(R.string.five_sec)
-                toastService?.getCurrentTimeSeconds(5000)
+                textView.text = getString(R.string.five_sec_massage)
+                toastService?.getToasts(5000)
                 true
             }
             R.id.ten_seconds -> {
-                textView.text = getString(R.string.ten_sec)
-                toastService?.getCurrentTimeSeconds(10000)
+                textView.text = getString(R.string.ten_sec_massage)
+                toastService?.getToasts(10000)
+                true
+            }
+            R.id.stop_toast -> {
+                toastService?.stopToasts()
+                resetStartTextView()
                 true
             }
             else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    private fun resetStartTextView(){
+        if (!toastService?.isShow()!!){
+            val textView = findViewById<TextView>(R.id.massage)
+            textView.text = getString(R.string.start_massage)
         }
     }
 
